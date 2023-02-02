@@ -1,0 +1,19 @@
+.App {
+  text-align: center;
+}
+
+.Conversation {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+
+  .ResponseInstructions {
+    background: white;
+    color: #535353;
+    width: 200px;
+    padding: 13px 20px;
+    border-radius: 40px;
+    font-weight: 700;
+    margin: 10px auto;
+  }
+}
