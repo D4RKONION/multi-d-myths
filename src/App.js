@@ -13,15 +13,22 @@ const [selectedMyth, setSelectedMyth] = useState(-1);
 const [responsesShown, setResponsesShown] = useState(false);
 
 useEffect(() => {
+  window.scrollTo({
+    top: document.body.scrollHeight,
+    left: 0,
+    behavior: "smooth"
+  })
   setTimeout(() => {
     setResponsesShown(true)
   }, "3000")
-  window.scrollTo(0, document.body.scrollHeight);
   
 }, [conversationHistory])
 
 useEffect(() => {
-  window.scrollTo(0, document.body.scrollHeight);
+  if (responsesShown) {
+    document.getElementById("ResponseInstructions").scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
+  }
+  
 }, [responsesShown])
 
   return (

@@ -7,7 +7,7 @@
   flex-direction: column;
   margin-bottom: 50px;
 
-  .ResponseInstructions {
+  #ResponseInstructions {
     background: white;
     color: #535353;
     width: 200px;
@@ -15,5 +15,7 @@
     border-radius: 40px;
     font-weight: 700;
     margin: 10px auto;
+    cursor: pointer;
+    scroll-margin-top: -105px;
   }
 }

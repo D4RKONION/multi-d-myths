@@ -1,12 +1,12 @@
 const MYTHS = [
   {
     "index": 0,
-    "myth": "You can't celebrate Christmas in a Multi-D School",
-    "answer": "ET/CNS mark these holidays festivals objectively, by celebrating all holidays. Winter concerts and festivals of light still happen."
+    "myth": "You can't celebrate Christmas, Easter, St. Patrick's Day or Halloween in a Multi-D School",
+    "answer": "Of course you can! Multi-D schools mark these days, the only difference is that they also talk about things like Kwanzaa, Vesak or Eid. Multi-D schools mark all holidays objectively so that everyone can feel included.\n\nWinter concerts and festivals of light still happen; Easter Egg hunts and art lessons still happen; Being proud of being Irish and attending St. Patrick's Day marches still happens!\n\nAnd of course, dressing up at Halloween is not only allowed, but encouraged :D"
   },
   {
     "index": 1,
-    "myth": "There'll be no more grandparents day",
+    "myth": "There'll be no more grandparents day if the school changes to Multi-D",
     "answer": "Started in Ireland in 2012, shortly after the forum for pluralism. No link, but every grandparent would be welcome, not just Catholic"
   },
   {

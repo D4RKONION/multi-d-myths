@@ -32,16 +32,20 @@ const ResponseOptions = ({searchValue, setConversationHistory}) => {
 
   return(
     <>
-      <div className="ResponseInstructions">
-        SELECT A MYTH
+      <div
+        id="ResponseInstructions"
+        onClick={() => document.getElementById("ResponseInstructions").scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"})}
+      >
+        TRY ANOTHER MYTH
       </div>
       {threeRandomUnusedMyths.map((randomMyth) => 
         <SpeechBubble
-          type={"question"}
+          type={"option"}
           key={randomMyth.index + "key"}
           text={randomMyth.myth}
           answer={randomMyth.answer}
           onClick={() => {setConversationHistory(randomMyth.index);}}
+          // onClick={() => {setConversationHistory(0);}}
         />
       )}
     </>
