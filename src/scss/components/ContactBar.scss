@@ -1,0 +1,35 @@
+.ContactBar {
+  background: #075e56;
+  color: white;
+  margin: 0;
+  display: flex;
+  padding: 11px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  h1 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: left;
+  }
+  
+  p {   
+    font-size: 13px;
+    margin: 0;
+    text-align: left;
+    color: #e7e7e7;
+  }
+
+  .leftArrow {
+    width: 25px;
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(148deg) brightness(101%) contrast(103%);
+    margin: 0 5px;
+  }
+  .avatar {
+    border-radius: 75px;
+    height: 41px;
+    margin: 0 12px 0 5px;
+  }
+}

@@ -4,6 +4,7 @@ import SearchBar from './js/components/SearchBar';
 import React, { useEffect, useState } from 'react';
 import ResponseOptions from './js/components/ResponseOptions';
 import MYTHS from './js/constants/Myths';
+import ContactBar from './js/components/ContactBar';
 
 const App = () => {
   
@@ -33,7 +34,9 @@ useEffect(() => {
 
   return (
     <div className="App">
-            
+      <ContactBar
+      
+      />
       <div className="Conversation">
         
         <SpeechBubble 
