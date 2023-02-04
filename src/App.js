@@ -35,7 +35,7 @@ useEffect(() => {
     <div className="App">
             
       <div className="Conversation">
-        {selectedMyth}
+        
         <SpeechBubble 
           type={"answer"}
           text={"Did you hear? Our school might become multi-denomanational!"}  
@@ -62,6 +62,7 @@ useEffect(() => {
         {responsesShown && 
           <ResponseOptions
             searchValue={searchValue}
+            conversationHistory={conversationHistory}
             setConversationHistory={(mythIndex) => {setConversationHistory([...conversationHistory, mythIndex]); setResponsesShown(false)}}
           />
         }

@@ -1,3 +1,14 @@
+@keyframes wiggle {
+  0% { transform: translate(0, 0); }
+  94% { transform: translate(0px, 0); }
+  95% { transform: translate(10px, 0); }
+  96% { transform: translate(-8px, 0); }
+ 97% { transform: translate(6px, 0); }
+ 98% { transform: translate(-4px, 0); }
+ 99% { transform: translate(2px, 0); }
+100% { transform: translate(0px, 0); }
+}
+
 .App {
   text-align: center;
 }
@@ -6,6 +17,8 @@
   display: flex;
   flex-direction: column;
   margin-bottom: 50px;
+  max-width: 55em;
+  margin: 0 auto 50px;
 
   #ResponseInstructions {
     background: white;
@@ -17,5 +30,6 @@
     margin: 10px auto;
     cursor: pointer;
     scroll-margin-top: -105px;
+    animation: wiggle 7s infinite;
   }
 }
