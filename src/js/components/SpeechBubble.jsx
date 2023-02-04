@@ -1,6 +1,6 @@
 import "../../scss/components/SpeechBubble.scss"
 
-const SpeechBubble = ({type, text, fade, onClick}) => {
+const SpeechBubble = ({type, text, mythIndex, fade, onClick}) => {
 
   const padtoTwoDigits = (num) => {
     return String(num).padStart(2, '0');
@@ -14,7 +14,11 @@ const SpeechBubble = ({type, text, fade, onClick}) => {
       onClick={onClick}
     >
       {text}
-      <span className="Timestamp">{hoursAndMinutes}</span>
+      <span className="Timestamp">{
+        !isNaN(mythIndex) && (type === "question" || type === "option") ? `Myth #${mythIndex + 1}`
+        : !isNaN(mythIndex) && type === "answer" ? `Truth #${mythIndex + 1}`
+        : hoursAndMinutes
+      }</span>
     </div>
   )
 

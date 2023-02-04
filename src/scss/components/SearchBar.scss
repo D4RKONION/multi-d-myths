@@ -1,12 +1,25 @@
 .SearchBar {
-  padding: 10px;
-  border: 1px solid #dddddd;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #f0f2f5;
+  padding: 9px;
   width: 100%;
-  font-size: 16px;
-  @at-root  form {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
+  form {
+    input {
+      padding: 10px;
+      border: 1px solid #dddddd;
+      width: 93%;
+      max-width: 800px;
+      font-size: 16px;
+      &:focus {
+        outline: none;
+        border-radius: 8px;
+      }
+      &::placeholder {
+        color: #282828;
+      }
+    }
   }
 }

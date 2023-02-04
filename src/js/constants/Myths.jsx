@@ -2,17 +2,17 @@ const MYTHS = [
   {
     "index": 0,
     "myth": "You can't celebrate Christmas, Easter, St. Patrick's Day or Halloween in a Multi-D School",
-    "answer": "Of course you can! Multi-D schools mark these days, the only difference is that they also talk about things like Kwanzaa, Vesak or Eid. Multi-D schools mark all holidays objectively so that everyone can feel included.\n\nWinter concerts and festivals of light still happen; Easter Egg hunts and art lessons still happen; Being proud of being Irish and attending St. Patrick's Day marches still happens!\n\nAnd of course, dressing up at Halloween is not only allowed, but encouraged :D"
+    "answer": "Of course you can! Multi-D schools mark these days, the only difference is that they also talk about things like Kwanzaa, Vesak or Eid. Multi-D schools mark all holidays objectively so that everyone can feel included.\n\nWinter concerts and festivals of light still happen; Easter Egg hunts and art lessons still happen; Being proud of being Irish and attending St. Patrick's Day marches still happens!\n\nAnd of course, dressing up at Halloween is not only allowed, but encouraged 😃"
   },
   {
     "index": 1,
-    "myth": "There'll be no more grandparents day if the school changes to Multi-D",
-    "answer": "Started in Ireland in 2012, shortly after the forum for pluralism. No link, but every grandparent would be welcome, not just Catholic"
+    "myth": "There'll be no more Grandparents Day if the school changes to Multi-D",
+    "answer": "There wouldn't be a 'Catholic Schools Week' Grandparents Day but that doesn't mean the new Multi-D school couldn't just run their own Grandparents Day! Not only that but every grandparent would be made to feel welcome in a Multi-D school, not just the Catholic ones.\n\nAlso did you know Catholic Schools week (and the associated 'Grandparents Day') began in 2012, shortly after the forum for Patronage & Pluralism recommended the divestment of schools away from the Catholic church? Curious 🤔"
   },
   {
     "index": 2,
-    "myth": "no uniforms = no safety on tours",
-    "answer": "CNS can have uniforms. 0 children lost in ET tours"
+    "myth": "With the removal of uniforms, kids will be less safe on school tours",
+    "answer": "Actually Community National Schools can have uniforms, so it wouldn't be an issue for them.\n\nAs for Educate Together schools, there hasn't been a SINGLE documented case of a child going missing for any significant length of time on a school tour or trip.\n\nBesides, most kids wear their own jackets when they go on trips due to Irish weather, so teachers are well used to looking after big groups of kids that look different."
   },
   {
     "index": 3,

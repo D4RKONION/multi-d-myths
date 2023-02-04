@@ -41,22 +41,24 @@ useEffect(() => {
         
         <SpeechBubble 
           type={"answer"}
-          text={"Did you hear? Our school might become multi-denomanational!"}  
+          text={"Did you hear? Our school might become multi-denomanational!"}
         />
         <SpeechBubble 
           type={"question"}
-          text={"Oh I don't like the sound of that..."} 
+          text={"Oh I don't like the sound of that..."}
         />
         {conversationHistory.map(messageKey =>
           <React.Fragment key={`${messageKey} qna`}>
             <SpeechBubble
               type={"question"}
               text={MYTHS[messageKey].myth}
+              mythIndex={MYTHS[messageKey].index}
               fade={true}
             />
             <SpeechBubble
               type={"answer"}
               text={MYTHS[messageKey].answer}
+              mythIndex={MYTHS[messageKey].index}
               fade={true}
             />
           </React.Fragment>
