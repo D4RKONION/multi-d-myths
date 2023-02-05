@@ -26,8 +26,14 @@ useEffect(() => {
 }, [conversationHistory])
 
 useEffect(() => {
-  if (responsesShown) {
+  if (responsesShown && conversationHistory.length < MYTHS.length -1 ) {
     document.getElementById("ResponseInstructions").scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
+  } else {
+    window.scrollTo({
+      top: document.body.scrollHeight,
+      left: 0,
+      behavior: "smooth"
+    });
   }
   
 }, [responsesShown])
@@ -35,7 +41,7 @@ useEffect(() => {
   return (
     <div className="App">
       <ContactBar
-      
+        setConversationHistory={(mythIndex) => {setConversationHistory([...conversationHistory, mythIndex]); setResponsesShown(false)}}
       />
       <div className="Conversation">
         
@@ -64,12 +70,27 @@ useEffect(() => {
           </React.Fragment>
         )}
 
-        {responsesShown && 
+        {
+          responsesShown && conversationHistory.length >= MYTHS.length -1 ? 
+            <>
+              <SpeechBubble
+                type={"question"}
+                text={"You've convinced me! Multi Denominational really are amazing. I'm excited for our school to become one now!"}
+                fade={true}
+              />
+              <SpeechBubble
+                type={"answer"}
+                text={"I hope you enjoyed the experience! Please share it with your friends, family and fellow staff members (if you work in a school)."}
+                fade={true}
+              />
+            </>
+          : responsesShown ? 
           <ResponseOptions
             searchValue={searchValue}
             conversationHistory={conversationHistory}
             setConversationHistory={(mythIndex) => {setConversationHistory([...conversationHistory, mythIndex]); setResponsesShown(false)}}
           />
+          : null
         }
       </div>
       <SearchBar

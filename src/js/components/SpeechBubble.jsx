@@ -15,8 +15,8 @@ const SpeechBubble = ({type, text, mythIndex, fade, onClick}) => {
     >
       {text}
       <span className="Timestamp">{
-        !isNaN(mythIndex) && (type === "question" || type === "option") ? `Myth #${mythIndex + 1}`
-        : !isNaN(mythIndex) && type === "answer" ? `Truth #${mythIndex + 1}`
+        !isNaN(mythIndex) && (type === "question" || type === "option") ? `Myth #${mythIndex}`
+        : !isNaN(mythIndex) && type === "answer" ? `Truth #${mythIndex}`
         : hoursAndMinutes
       }</span>
     </div>
