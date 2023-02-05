@@ -1,5 +1,6 @@
 import { useRef } from "react";
-import "../../scss/components/SpeechBubble.scss"
+import "../../scss/components/SpeechBubble.scss";
+import ReactMarkdown from 'react-markdown';
 
 const SpeechBubble = ({type, text, mythIndex, fade, onClick}) => {
 
@@ -15,7 +16,7 @@ const SpeechBubble = ({type, text, mythIndex, fade, onClick}) => {
       style={fade === "second" ? {animationDelay: "1.6s"} : null}
       onClick={onClick}
     >
-      {text}
+      <ReactMarkdown linkTarget="_blank" >{text}</ReactMarkdown>
       <span className="Timestamp">{
         mythIndex !== 0 && !isNaN(mythIndex) && (type === "question" || type === "option") ? `Myth #${mythIndex}`
         : mythIndex !== 0 && !isNaN(mythIndex) && type === "answer" ? `Truth #${mythIndex}`
