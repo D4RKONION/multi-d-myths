@@ -1,3 +1,7 @@
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
 @keyframes fadeInToLeft {
   0% { opacity: 0; transform: translate(30px, 0); }
   100% { opacity: 1; transform: translate(0px, 0); }
@@ -26,7 +30,7 @@
       top: 0;
   }
 
-  &.question, &.option {
+  &.question {
     background-color: #d4fac1;
     border-radius: 7.5px 0 7.5px 7.5px;
     align-self: end;
@@ -63,6 +67,19 @@
     }
   }
 
+  &.option {
+    cursor: pointer;
+    background-color: #faf5c1;
+    border-radius: 7.5px 7.5px 7.5px 7.5px;
+    align-self: center;
+    max-width: 400px;
+    &.fade{
+      opacity: 0;
+      animation: fadeIn 0.5s;
+      animation-fill-mode: forwards;
+    }
+  }
+
   .Timestamp {
     position: absolute;
     bottom: 4px;
@@ -71,9 +88,7 @@
     color: #848484;
   }
 
-  &.option {
-    cursor: pointer;
-  }
+  
 }
 
 
