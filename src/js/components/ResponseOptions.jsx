@@ -72,6 +72,7 @@ const ResponseOptions = ({searchValue, conversationHistory, setConversationHisto
             key={mythEntry.index + "key"}
             text={mythEntry.myth}
             mythIndex={mythEntry.index}
+            fade={"first"}
             onClick={() => {setConversationHistory(mythEntry.index);}}
           />
         )
@@ -81,6 +82,7 @@ const ResponseOptions = ({searchValue, conversationHistory, setConversationHisto
             key={randomMyth.index + "key"}
             text={randomMyth.myth}
             mythIndex={randomMyth.index}
+            fade={"first"}
             onClick={() => {setConversationHistory(randomMyth.index);}}
           />
         )
