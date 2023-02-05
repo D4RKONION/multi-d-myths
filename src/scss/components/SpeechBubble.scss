@@ -1,9 +1,8 @@
-@keyframes fadeInAnswer {
+@keyframes fadeInToLeft {
   0% { opacity: 0; transform: translate(30px, 0); }
-  66% { opacity: 0; transform: translate(30px, 0); }
   100% { opacity: 1; transform: translate(0px, 0); }
 }
-@keyframes fadeInQuestion {
+@keyframes fadeInToRight {
   0% { opacity: 0; transform: translate(-30px, 0); }
   100% { opacity: 1; transform: translate(0px, 0); }
 }
@@ -32,7 +31,9 @@
     border-radius: 7.5px 0 7.5px 7.5px;
     align-self: end;
     &.fade {
-      animation: fadeInQuestion 0.8s;
+      opacity: 0;
+      animation: fadeInToRight 0.8s;
+      animation-fill-mode: forwards;
     }
     &::before {
       right: -16px;
@@ -48,7 +49,9 @@
     border-radius: 0 7.5px 7.5px 7.5px;
     align-self: start;
     &.fade{
-      animation: fadeInAnswer 2.4s;
+      opacity: 0;
+      animation: fadeInToLeft 0.8s;
+      animation-fill-mode: forwards;
     }
     
     &::before {

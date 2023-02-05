@@ -11,6 +11,7 @@ const SpeechBubble = ({type, text, mythIndex, fade, onClick}) => {
   return(
     <div
       className={`SpeechBubble ${type} ${fade && "fade"}`}
+      style={fade === "second" ? {animationDelay: "1.6s"} : null}
       onClick={onClick}
     >
       {text}

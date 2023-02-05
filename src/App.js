@@ -48,10 +48,12 @@ useEffect(() => {
         <SpeechBubble 
           type={"answer"}
           text={"Did you hear? Our school might become multi-denomanational!"}
+          fade={'first'}
         />
         <SpeechBubble 
           type={"question"}
           text={"Oh I don't like the sound of that..."}
+          fade={'second'}
         />
         {conversationHistory.map(messageKey =>
           <React.Fragment key={`${messageKey} qna`}>
@@ -59,13 +61,13 @@ useEffect(() => {
               type={"question"}
               text={MYTHS[messageKey].myth}
               mythIndex={MYTHS[messageKey].index}
-              fade={true}
+              fade={'first'}
             />
             <SpeechBubble
               type={"answer"}
               text={MYTHS[messageKey].answer}
               mythIndex={MYTHS[messageKey].index}
-              fade={true}
+              fade={'second'}
             />
           </React.Fragment>
         )}
@@ -76,12 +78,12 @@ useEffect(() => {
               <SpeechBubble
                 type={"question"}
                 text={"You've convinced me! Multi Denominational really are amazing. I'm excited for our school to become one now!"}
-                fade={true}
+                fade={'first'}
               />
               <SpeechBubble
                 type={"answer"}
                 text={"I hope you enjoyed the experience! Please share it with your friends, family and fellow staff members (if you work in a school)."}
-                fade={true}
+                fade={'second'}
               />
             </>
           : responsesShown ? 
