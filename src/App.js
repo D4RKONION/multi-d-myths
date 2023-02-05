@@ -10,18 +10,18 @@ const App = () => {
   
 const [searchValue, setSearchValue] = useState("");
 const [conversationHistory, setConversationHistory] = useState([]);
-const [selectedMyth, setSelectedMyth] = useState(-1);
 const [responsesShown, setResponsesShown] = useState(false);
 
 useEffect(() => {
+  setSearchValue("");
   window.scrollTo({
     top: document.body.scrollHeight,
     left: 0,
     behavior: "smooth"
-  })
+  });
   setTimeout(() => {
     setResponsesShown(true)
-  }, "3000")
+  }, "3000");
   
 }, [conversationHistory])
 
@@ -74,7 +74,7 @@ useEffect(() => {
       </div>
       <SearchBar
         value={searchValue}
-        onChange={e => {setSearchValue(e.target.value)}}
+        onChange={e => {setSearchValue(e.target.value.toLowerCase())}}
       />
     </div>
   );

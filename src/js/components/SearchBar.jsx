@@ -11,7 +11,7 @@ const SearchBar = ({value, onChange}) => {
           type="text"
           value={value} 
           onChange={onChange}
-          placeholder="Click/Tap a myth, or filter them here"
+          placeholder="Select one of the above Myths, or filter them here"
         />
       </form>
     </div>

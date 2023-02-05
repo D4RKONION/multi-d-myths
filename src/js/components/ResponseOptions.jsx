@@ -28,8 +28,8 @@ function sample(pool, k, destructive) {
 }
 
 const ResponseOptions = ({searchValue, conversationHistory, setConversationHistory}) => {
-  // const threeRandomUnusedMyths = sample(MYTHS, 3, false)
-  const threeRandomUnusedMyths = [MYTHS[0], MYTHS[1], MYTHS[2]]
+  const threeRandomUnusedMyths = sample(MYTHS, 3, false)
+  // const threeRandomUnusedMyths = [MYTHS[0], MYTHS[1], MYTHS[2]]
 
   return(
     <>
@@ -39,16 +39,28 @@ const ResponseOptions = ({searchValue, conversationHistory, setConversationHisto
       >
         {conversationHistory.length === 0 ? "SELECT A MYTH" : "TRY ANOTHER MYTH"}
       </div>
-      {threeRandomUnusedMyths.map((randomMyth) => 
-        <SpeechBubble
-          type={"option"}
-          key={randomMyth.index + "key"}
-          text={randomMyth.myth}
-          mythIndex={randomMyth.index}
-          onClick={() => {setConversationHistory(randomMyth.index);}}
-          // onClick={() => {setConversationHistory(2);}}
-        />
-      )}
+      {searchValue ?
+        MYTHS.filter(mythEntry =>
+          mythEntry.myth.toLowerCase().includes(searchValue)
+        ).map(mythEntry =>
+          <SpeechBubble
+            type={"option"}
+            key={mythEntry.index + "key"}
+            text={mythEntry.myth}
+            mythIndex={mythEntry.index}
+            onClick={() => {setConversationHistory(mythEntry.index);}}
+          />
+        )
+      : threeRandomUnusedMyths.map((randomMyth) => 
+          <SpeechBubble
+            type={"option"}
+            key={randomMyth.index + "key"}
+            text={randomMyth.myth}
+            mythIndex={randomMyth.index}
+            onClick={() => {setConversationHistory(randomMyth.index);}}
+          />
+        )
+      }
     </>
   )
 }
