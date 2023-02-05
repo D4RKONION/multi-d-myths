@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import "../../scss/components/SpeechBubble.scss"
 
 const SpeechBubble = ({type, text, mythIndex, fade, onClick}) => {
@@ -6,7 +7,7 @@ const SpeechBubble = ({type, text, mythIndex, fade, onClick}) => {
     return String(num).padStart(2, '0');
   }
   const now = new Date();
-  const hoursAndMinutes = padtoTwoDigits(now.getHours()) + ':' + padtoTwoDigits(now.getMinutes());
+  const hoursAndMinutes = useRef(`${padtoTwoDigits(now.getHours())}:${padtoTwoDigits(now.getMinutes())}`);
 
   return(
     <div
@@ -16,9 +17,9 @@ const SpeechBubble = ({type, text, mythIndex, fade, onClick}) => {
     >
       {text}
       <span className="Timestamp">{
-        !isNaN(mythIndex) && (type === "question" || type === "option") ? `Myth #${mythIndex}`
-        : !isNaN(mythIndex) && type === "answer" ? `Truth #${mythIndex}`
-        : hoursAndMinutes
+        mythIndex !== 0 && !isNaN(mythIndex) && (type === "question" || type === "option") ? `Myth #${mythIndex}`
+        : mythIndex !== 0 && !isNaN(mythIndex) && type === "answer" ? `Truth #${mythIndex}`
+        : hoursAndMinutes.current
       }</span>
     </div>
   )
