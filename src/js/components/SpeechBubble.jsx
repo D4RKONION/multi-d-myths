@@ -4,7 +4,6 @@ import ReactMarkdown from 'react-markdown';
 import HeartIcon from '../../images/heart.svg';
 import GitIcon from '../../images/git.svg';
 import HomeIcon from '../../images/home.svg';
-import PaypalIcon from '../../images/paypal.svg';
 import TwitterIcon from '../../images/twitter.svg';
 
 const SpeechBubble = ({type, text, mythIndex, fade, onClick}) => {
@@ -26,10 +25,10 @@ const SpeechBubble = ({type, text, mythIndex, fade, onClick}) => {
       <>
       <hr></hr>
         <div className="creditsBar">
-          <span><img src={HomeIcon} /></span>
-          <span><img src={TwitterIcon} /></span>
-          <span><img src={HeartIcon} /></span>
-          <span><img src={GitIcon} /></span>
+          <a href="https://teacherbuilt.me"><img src={HomeIcon} /></a>
+          <a href="https://twitter.com/D4RK_ONION" target="_blank"><img src={TwitterIcon} /></a>
+          <a href="https://www.paypal.com/paypalme/fullmeter" target="_blank"><img src={HeartIcon} /></a>
+          <a href="https://github.com/D4RKONION/multi-d-myths" target="_blank"><img src={GitIcon} /></a>
         </div>
         </>
       }

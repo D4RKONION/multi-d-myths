@@ -102,11 +102,12 @@
     justify-content: space-between;
     max-width: 240px;
     margin: 0 auto;
-    span {
+    a {
       padding: 9px;
       background-color: #0CAB9B;
       border-radius: 100px;
       display: flex;
+      cursor: pointer;
     }
     img {
       filter: invert(37%) sepia(7%) saturate(0%) hue-rotate(273deg) brightness(94%) contrast(92%);
