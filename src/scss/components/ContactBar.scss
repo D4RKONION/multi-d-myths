@@ -8,6 +8,12 @@
   top: 0;
   z-index: 100;
 
+  .avatar {
+    border-radius: 75px;
+    height: 41px;
+    margin: 0 12px 0 17px;
+  }
+
   h1 {
     margin: 0;
     font-size: 18px;
@@ -21,19 +27,16 @@
     text-align: left;
     color: #e7e7e7;
   }
-
-  .icon {
-    width: 25px;
-    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(148deg) brightness(101%) contrast(103%);
-    margin: 0 5px;
-    &.helpIcon {
-      margin-left: auto;
-      padding: 0 10px;
+  .iconContainer {
+    margin-left: auto;
+    padding: 0 10px;
+    align-self: center;
+    .icon {
+      width: 25px;
+      filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(148deg) brightness(101%) contrast(103%);
+      margin: 0 7px;
+      cursor: pointer;
     }
   }
-  .avatar {
-    border-radius: 75px;
-    height: 41px;
-    margin: 0 12px 0 5px;
-  }
+  
 }

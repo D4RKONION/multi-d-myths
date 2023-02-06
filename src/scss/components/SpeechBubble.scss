@@ -13,7 +13,7 @@
 
 .SpeechBubble {
   padding: 8px 15px 28px;
-  margin: 10px 6.5%;
+  margin: 4px 6.5%;
   max-width: 70%;
   
   position: relative;
@@ -90,6 +90,31 @@
     right: 8px;
     font-size: 13px;
     color: #848484;
+  }
+  hr {
+    background-color: #c4c4c4;
+    height: 1px;
+    border: 0;
+    margin: 11px 0px;
+  }
+  .creditsBar {
+    display: flex;
+    justify-content: space-between;
+    max-width: 240px;
+    margin: 0 auto;
+    span {
+      padding: 9px;
+      background-color: #0CAB9B;
+      border-radius: 100px;
+      display: flex;
+    }
+    img {
+      filter: invert(37%) sepia(7%) saturate(0%) hue-rotate(273deg) brightness(94%) contrast(92%);
+      filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(14deg) brightness(102%) contrast(102%);
+      width: 30px; 
+    }
+    
+
   }
 
   
