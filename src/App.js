@@ -41,6 +41,7 @@ useEffect(() => {
   return (
     <div className="App">
       <ContactBar
+        conversationHistory={conversationHistory}
         setConversationHistory={(mythIndex) => {setConversationHistory([...conversationHistory, mythIndex]); setResponsesShown(false)}}
       />
       <div className="Conversation">

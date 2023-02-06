@@ -1,19 +1,30 @@
 import '../../scss/components/ContactBar.scss';
 import FriendAvatar from '../../images/friend.png';
-import HeartIcon from '../../images/heart.svg';
 import HelpIcon from '../../images/help.svg';
-import { useNavigate } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 
-const ContactBar = ({setConversationHistory}) => {
+const ContactBar = ({conversationHistory, setConversationHistory}) => {
 
-  const navigate = useNavigate();
+  const [friendStatus, setFriendStatus] = useState("Online")
+
+  useEffect(() => {
+    console.log(conversationHistory.length)
+    if (conversationHistory.length !== 0) {
+      setFriendStatus("Typing...")
+      setTimeout(() => {
+        setFriendStatus("Online")
+      }, "1700");
+    }
+    
+  }, [conversationHistory])
+
   return(
     <div className="ContactBar">
       {/* <img src={LeftArrow} className="icon" alt="Back Button" /> */}
       <img src={FriendAvatar} className="avatar" alt="Friend's Avatar" />
       <div>
         <h1>Multi-D Myths</h1>
-        <p>Online</p>
+        <p>{friendStatus}</p>
       </div>
       <div className='iconContainer'>
         <img
