@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import MYTHS from "../constants/Myths";
 import SpeechBubble from "./SpeechBubble";
 
@@ -49,8 +50,8 @@ function sample(initialPool, k, destructive, conversationHistory) {
 }
 
 const ResponseOptions = ({searchValue, conversationHistory, setConversationHistory}) => {
-  const threeRandomUnusedMyths = sample(MYTHS, 3, false, conversationHistory)
-  // const threeRandomUnusedMyths = [MYTHS[0], MYTHS[1], MYTHS[2]]
+  const threeRandomUnusedMyths = useRef(sample(MYTHS, 3, false, conversationHistory));
+  // const threeRandomUnusedMyths.current = [MYTHS[0], MYTHS[1], MYTHS[2]]
 
   return(
     <>
@@ -76,7 +77,7 @@ const ResponseOptions = ({searchValue, conversationHistory, setConversationHisto
             onClick={() => {setConversationHistory(mythEntry.index);}}
           />
         )
-      : threeRandomUnusedMyths.map((randomMyth) => 
+      : threeRandomUnusedMyths.current.map((randomMyth) => 
           <SpeechBubble
             type={"option"}
             key={randomMyth.index + "key"}

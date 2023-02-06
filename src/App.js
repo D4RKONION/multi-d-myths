@@ -5,12 +5,32 @@ import React, { useEffect, useState } from 'react';
 import ResponseOptions from './js/components/ResponseOptions';
 import MYTHS from './js/constants/Myths';
 import ContactBar from './js/components/ContactBar';
+import ScrollToBottomButton from './js/components/ScrollToBottomButton';
 
 const App = () => {
   
 const [searchValue, setSearchValue] = useState("");
 const [conversationHistory, setConversationHistory] = useState([]);
 const [responsesShown, setResponsesShown] = useState(false);
+const [scrollToBottomButtonShown, setScrollToBottomButtonShown] = useState(false);
+
+useEffect(() => {
+  const onScroll = e => {
+
+    const totalPageHeight = document.body.scrollHeight; 
+    const scrollPoint = window.scrollY + window.innerHeight - 25;
+
+    // check if we hit the bottom of the page
+    if(scrollPoint >= totalPageHeight) {
+        setScrollToBottomButtonShown(false)
+    } else {
+      setScrollToBottomButtonShown(true)
+    }
+  }
+
+  window.addEventListener("scroll", onScroll);
+  return () => window.removeEventListener("scroll", onScroll);
+}, [])
 
 useEffect(() => {
   setSearchValue("");
@@ -26,15 +46,15 @@ useEffect(() => {
 }, [conversationHistory])
 
 useEffect(() => {
-  if (responsesShown && conversationHistory.length < MYTHS.length -1 ) {
-    document.getElementById("ResponseInstructions").scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
-  } else {
-    window.scrollTo({
-      top: document.body.scrollHeight,
-      left: 0,
-      behavior: "smooth"
-    });
-  }
+
+     const totalPageHeight = document.body.scrollHeight; 
+     const scrollPoint = window.scrollY + window.innerHeight - 25;
+ 
+     // check if we hit the bottom of the page
+     if(scrollPoint < totalPageHeight && responsesShown) {
+        setScrollToBottomButtonShown(true)
+     }
+
   
 }, [responsesShown])
 
@@ -56,8 +76,8 @@ useEffect(() => {
           text={"Oh I don't like the sound of that..."}
           fade={'second'}
         />
-        {conversationHistory.map(messageKey =>
-          <React.Fragment key={`${messageKey} qna`}>
+        {conversationHistory.map((messageKey, index) =>
+          <React.Fragment key={`${messageKey}-qna-${index}`}>
             <SpeechBubble
               type={"question"}
               text={MYTHS[messageKey].myth}
@@ -83,7 +103,7 @@ useEffect(() => {
               />
               <SpeechBubble
                 type={"answer"}
-                text={"I hope you enjoyed the experience! Please share it with your friends, family and fellow staff members (if you work in a school)."}
+                text={"I hope you enjoyed the experience! Please share it with your friends, family and your school staff."}
                 fade={'second'}
               />
             </>
@@ -96,6 +116,10 @@ useEffect(() => {
           : null
         }
       </div>
+      {scrollToBottomButtonShown &&
+        <ScrollToBottomButton />
+      }
+      
       <SearchBar
         value={searchValue}
         onChange={e => {setSearchValue(e.target.value.toLowerCase())}}
