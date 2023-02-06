@@ -21,8 +21,8 @@ const MYTHS = [
   },
   {
     "index": 4,
-    "myth": "no greeting in Irish?!",
-    "answer": "Absolute nonsense"
+    "myth": "Students and teachers won't be able to greet each other in Irish anymore",
+    "answer": "Níl sé sin fíor ar chor ar bith! Multi-D schools use *Dia Dhuit* just like every other school in the country.\n\nIf we followed this logic, they wouldn't be able to use the word *goodbye* either, which is a contraction of *God be with you*. Words with religious origins and the multi-denominational ethos are not at odds with each other.\n\nSo *Dia Dhuit* and *Goodbye* to you 👋"
   },
   {
     "index": 5,
