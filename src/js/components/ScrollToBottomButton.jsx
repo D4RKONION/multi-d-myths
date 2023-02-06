@@ -1,4 +1,5 @@
 import '../../scss/components/ScrollToBottomButton.scss'
+import ScrollToBottomArrow from "../../images/ScrollToBottomArrow.png"
 
 const ScrollToBottomButton = () => {
   return(
@@ -6,7 +7,7 @@ const ScrollToBottomButton = () => {
       className="ScrollToBottomButton"
       onClick={() => document.getElementById("ResponseInstructions").scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"})}
     >
-      <span>⯬</span>
+      <img src={ScrollToBottomArrow} />
     </div>
   )
 }
