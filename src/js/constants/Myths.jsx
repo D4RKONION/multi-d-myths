@@ -32,7 +32,7 @@ const MYTHS = [
   {
     "index": 6,
     "myth": "Teachers and SNAs will lose their jobs or seniority, and might even have to reinterview",
-    "answer": "Schools have been reconfiguring (divesting from the Church) since 2016 now, and there isn't a single reported incident of a teacher being forced to leave a school over a reduction in numbers. Certainly all jobs and seniority would remain in place. The only time seniority may be at stake is when two schools combine, and that is not the case for most schools which are reconfiguring.\n\nWhat's more, the demand for Multi-D schools is so high that it's quite likely that applications to the school might increase, which would more jobs for more teachers.👩‍🏫👨‍🏫"
+    "answer": "Schools have been reconfiguring (divesting from the Church) since 2016 now, and there isn't a single reported incident of a teacher being forced to leave a school over a reduction in numbers. Certainly all jobs and seniority would remain in place. The only time seniority may be at stake is when two schools combine, and that is not the case for most schools which are reconfiguring.\n\nWhat's more, the demand for Multi-D schools is so high that it's quite likely that applications to the school might increase, which would mean more jobs for more teachers.👩‍🏫👨‍🏫"
   },  
   {
     "index": 7,
