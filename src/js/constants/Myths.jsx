@@ -2,7 +2,7 @@ const MYTHS = [
   {
     "index": 0,
     "myth": "What is this website?",
-    "answer": "This is a little web app designed by [Paul](https://twitter.com/D4RK_ONION), who is an Irish Primary School teacher based in Dublin. It was inspired by a [podcast](https://podtail.com/en/podcast/anseo-s-podcast/23-myths-about-multi-denominational-schools/) by [Simon Lewis](https://twitter.com/simonmlewis) about 23 of the common misconceptions around Multi-Denominational Schools.\n\nTo use the app, simply select a myth from the menu below to see a response to it. You can also filter for certain myths using the text box at the bottom of the page. Have fun and I hope you learn something new 😃"
+    "answer": "This is a little web app designed by [Paul](https://twitter.com/D4RK_ONION), who is an Irish Primary School teacher based in Dublin. It was inspired by a [podcast](https://podtail.com/en/podcast/anseo-s-podcast/23-myths-about-multi-denominational-schools/) by [Simon Lewis](https://twitter.com/simonmlewis) about 23 of the common misconceptions around [Multi-Denominational Schools](https://en.wikipedia.org/wiki/Multidenominational_school?useskin=vector).\n\nTo use the app, simply scroll down and select one of the three random myths to see a response to it. You can also filter for certain myths using the text box at the bottom of the page. Have fun and I hope you learn something new 😃"
   },  
   {
     "index": 1,
