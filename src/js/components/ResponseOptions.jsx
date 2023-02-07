@@ -2,15 +2,6 @@ import { useRef } from "react";
 import MYTHS from "../constants/Myths";
 import SpeechBubble from "./SpeechBubble";
 
-// https://stackoverflow.com/a/5767357/5510348
-// remove an item from an array
-function removeItemOnce(arr, value) {
-  var index = arr.indexOf(value);
-  if (index > -1) {
-    arr.splice(index, 1);
-  }
-  return arr;
-}
 
 // https://stackoverflow.com/a/61078260/5510348
 // Chooses k unique random elements from pool.
