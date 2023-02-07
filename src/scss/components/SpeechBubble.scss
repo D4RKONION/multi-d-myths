@@ -25,6 +25,10 @@
     font-size: 17px;
     margin: 0;
   }
+  ul {
+    display: grid;
+    margin:0;
+  }
 
   &::before {
     content: "";
